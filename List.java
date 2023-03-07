@@ -155,42 +155,33 @@ class list {
                  
 		return S ;
 	}
+   
+	list concteList(list end){
+		node temp=this.head;
+		while(temp.next!=null){
+		temp=temp.next;
+		}
+		temp.next=end.head;
+		return this;	
+	}
 
+	void replace(String pre,String ne){
 
-	// list date(list l,int year){
-		
-	// 	list temp=new list();
-	// 	node t=l.head.next;
-	// 	while(t!=null){
-	// 		String y=String.valueOf(t.data);
-	// 		y=y.substring(6);
-	// 		int a=Integer.parseInt(y);
-	// 		if(a==year){
-	// 			break;
-	// 		}
-	// 		t=t.next;
-			
-	// 	}
-	// 	temp.head=new node(t.data);
-	// 	node tt=temp.head;
-	// 	t=t.next;
-	// 	while(t!=null){
-	// 		String y=String.valueOf(t.data);
-	// 		y=y.substring(6);
-	// 		int a=Integer.parseInt(y);
-	// 		if(a!=year){
-	// 			break;
-	// 		}
-	// 		tt.next=new node(t.data);
-	// 		tt=tt.next;
-	// 		t=t.next;
-		
-	// 	}
-		
-		
-	// 	return temp;
-	// }
+		node temp=this.head;
 
+		while (temp!=null) {
+
+			String d=String.valueOf(temp.data);
+
+			if(d.equals(pre)){
+				temp.data=ne;
+			}
+
+			temp=temp.next;
+
+		}
+
+	}
 
 
 }
