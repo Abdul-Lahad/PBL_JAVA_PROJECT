@@ -165,24 +165,5 @@ class list {
 		return this;	
 	}
 
-	void replace(String pre,String ne){
-
-		node temp=this.head;
-
-		while (temp!=null) {
-
-			String d=String.valueOf(temp.data);
-
-			if(d.equals(pre)){
-				temp.data=ne;
-			}
-
-			temp=temp.next;
-
-		}
-
-	}
-
-
 }
 

@@ -79,15 +79,14 @@ public class Queue implements Queue_bluePrint {
     }
 
     public String toString(){
-        StringBuffer b = new StringBuffer("[");
+        StringBuffer b = new StringBuffer("");
 
         for (Node temp = head.next; temp != head; temp = temp.next) {
-            b.append("{ " + temp.country + " , " + temp.magnitude + " , " + temp.year + " } ");
+            b.append("[ Country : " + temp.country + " | Magnitude : " + temp.magnitude + " | Year : " + temp.year + " ] ");
 
             if (temp.next != head)
                 b.append("\n");
         }
-        b.append("]");
 
         String s = b.toString();
 
